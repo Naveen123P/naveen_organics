@@ -117,12 +117,8 @@
 </head>
 <body>
     <marquee class="marquee-styles">
-        
         <p class="slogan"><span class="marqee-span">Welcome to Naveen Organics  </span>Yours Health is Our Nation's Wealth</p>
-       
-        
     </marquee>
-    
     <div class="fixed-bar">
         <div class="nav-container">
             <img src="https://res.cloudinary.com/dywnwbcln/image/upload/v1699592066/jmd1qvayjhrgxbzu6os5.png" class = "nav-logo"/>
@@ -131,7 +127,6 @@
             <input type="search" placeholder="Search" class="search-bar">
             <img src="https://assets.ccbp.in/frontend/react-js/google-search-icon.png" alt="..." class="search-img"/>
         </div>
-
         <form action="./userDashbord/" method="POST">
             {% csrf_token %}
             <input type="hidden" name="username" value={{username}}>
@@ -140,20 +135,13 @@
                 <p class="user-name">{{username|title}}</p>
             </button>
         </form>      
-        <!-- <i class="fas fa-heart " id="fav-icon"></i> -->
          <div class="logout-button">
             <a href="../logout" class="logout-anchor">Logout</a>
          </div>
-         <!-- <div id="logout" class="hidden">
-                <a href="../home3">Logout</a>
-            </div> -->
-        <!-- <a href="../cart"><i class="fas fa-shopping-cart " id="fav-icon"></i></a>  -->
     </div>
-
     <div class="fruits-container">
         <div class="fruit-container">
             <iframe width="70" height="60" src="https://www.youtube-nocookie.com/embed/tG_qJN6DElo?mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; muted; web-share" allowfullscreen class="live-video" id="specialPositionVideo"></iframe>           
-            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/K-VT9zRSC-0?mute=1&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
             <p class="fruit-name">Mango</p>
         </div>
         <div class="fruit-container">
@@ -162,7 +150,6 @@
         <div class="fruit-container">
             <iframe width="70" height="60" src="https://www.youtube-nocookie.com/embed/dQlY4FRHhT4?mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="live-video" id="rightPositionVideo"></iframe>            <p class="fruit-name">Apple</p>
         </div>
-        
         <div class="fruit-container">
             <iframe width="70" height="60" src="https://www.youtube-nocookie.com/embed/MhDRrJ1gkzg?mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="live-video" id="rightPositionVideo"></iframe>            <p class="fruit-name">Graps</p>
         </div>
@@ -175,9 +162,7 @@
         <div class="fruit-container" id="sapotaVideo">
             <iframe width="70" height="60" src="https://www.youtube-nocookie.com/embed/EJHLiu7k2pA?mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="live-video" id="leftPositionVideo"></iframe>            <p class="fruit-name sapota-margin">Sapota</p>
         </div>
-
     </div>
-
     <div id="carouselExampleIndicators" class="carousel slide mt-3" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -203,11 +188,10 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
-    </div>   
-  
-<div style="background-color: aquamarine;" class="mt-1 ">
+    </div>    
+    <div style="background-color: aquamarine;" class="mt-1 ">
         <h1 style="text-align: center; color: purple;">Our Products</h1>
-    <div class="all-fruits-products" >
+        <div class="all-fruits-products" >
         {% for fruit in fruits %}
             <div class="card1 m-1 p-3">
                 <img src="{{ fruit.url }}" class="card-img-top" alt="{{ fruit.name }}" class="fruit-img " style="height: 250px; width: 95%;border-radius: 5px;">
@@ -223,12 +207,11 @@
                     </form>
                 </div>
             </div>
-        {% endfor %}
-            
+        {% endfor %} 
+        </div>
     </div>
-</div>
 
-    <!-- <section id="about-us" class="container mt-5">
+    <section id="about-us" class="container mt-5">
         <div class="row">
             <div class="col-md-6">
                 <h2>About Us</h2>
@@ -265,11 +248,7 @@
                 </div>
             </div>
         </div>
-    </footer> -->
-
-    
-    
-
+    </footer>
     <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
 </body>
 

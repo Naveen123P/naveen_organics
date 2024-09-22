@@ -163,12 +163,8 @@
 </head>
 <body>
     <marquee class="marquee-styles">
-        
-        <p class="slogan"><span class="marqee-span">Welcome to Naveen Organics  </span>Yours Health is Our Nation's Wealth</p>
-       
-        
+        <p class="slogan"><span class="marqee-span">Welcome to Naveen Organics  </span>Yours Health is Our Nation's Wealth</p>  
     </marquee>
-    
     <div class="fixed-bar">
         <div class="nav-container">
             <img src="https://res.cloudinary.com/dywnwbcln/image/upload/v1699592066/jmd1qvayjhrgxbzu6os5.png" class = "nav-logo"/>
@@ -185,19 +181,13 @@
                 <p class="user-name">{{username|title}}</p>
             </button>
         </form>      
-        <!-- <i class="fas fa-heart " id="fav-icon"></i> -->
          <div class="logout-button">
             <a href="../../logout" class="logout-anchor">Logout</a>
          </div>
-        
     </div>
-    
-
-
     <div class="fruits-container mb-4">
         <div class="fruit-container">
             <iframe width="70" height="60" src="https://www.youtube-nocookie.com/embed/tG_qJN6DElo?mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; muted; web-share" allowfullscreen class="live-video" id="specialPositionVideo"></iframe>           
-            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/K-VT9zRSC-0?mute=1&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
             <p class="fruit-name">Mango</p>
         </div>
         <div class="fruit-container">
@@ -206,7 +196,6 @@
         <div class="fruit-container">
             <iframe width="70" height="60" src="https://www.youtube-nocookie.com/embed/dQlY4FRHhT4?mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="live-video" id="rightPositionVideo"></iframe>            <p class="fruit-name">Apple</p>
         </div>
-        
         <div class="fruit-container">
             <iframe width="70" height="60" src="https://www.youtube-nocookie.com/embed/MhDRrJ1gkzg?mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="live-video" id="rightPositionVideo"></iframe>            <p class="fruit-name">Graps</p>
         </div>
@@ -219,52 +208,12 @@
         <div class="fruit-container" id="sapotaVideo">
             <iframe width="70" height="60" src="https://www.youtube-nocookie.com/embed/EJHLiu7k2pA?mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="live-video" id="leftPositionVideo"></iframe>            <p class="fruit-name sapota-margin">Sapota</p>
         </div>
-
     </div>
-
-    <!-- <div class="all-mango-container" id="sectionMangoFruitsContainer">
-        {% for mango in mangoes %}
-        <div>
-          <form action="../../cart" method="POST" class="mango-form">
-            <input type="hidden" name="id" value="{{ mango.id }}">
-            <div class="mango-fruit-container" data-mango-id="{{ mango.id }}">
-                <div class="bg-mango-img">
-                    <i class="far fa-heart favorite-icon"></i>
-                    <img src="{{ mango.imgUrl }}" alt="mango fruit" class="mango-img">
-                </div>
-                <div class="mango-fruit">
-                    <h3 class="mango-fruit-name">{{ mango.categoryName }}</h3>
-                    <p class="price-text">Price: Rs. {{ mango.price }}/kg</p>
-                    <div>
-                        <label for="quantity">Quantity:</label>
-                        <select name="quantity" id="quantity_{{ mango.id }}">
-                            <option value="1">1 kg</option>
-                            <option value="2">2 kg</option>
-                            <option value="3">3 kg</option>
-                            <option value="4">4 kg</option>
-                            <option value="5">5 kg</option>
-                        </select>
-                        <button type="submit" class="cart-button btn btn-primary mr-1">Add to Cart</button>
-                        <a href="../../Fruits/mango">
-                            <button type="button" class="cart-button btn btn-secondary">View Details</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-
-        {% endfor %}
-    </div> -->
-    
-
     <div class="all-fruits-products" >
         {% for mango in mangoes %}
         <div class="mango-fruit-container">
             <div class="bg-mango-img">
-                <!-- <i onclick="addorremovecolor()" id="favouriteIcon" class="far fa-heart favorite-icon"></i> -->
                 <img src={{mango.imgUrl}} alt="mango fruit" class="mango-img" >
-                
             </div>
             <div class="mango-fruit">
                 <h3 class="mango-fruit-name">{{mango.categoryName}}</h3>
@@ -297,87 +246,10 @@
                         <input type="hidden" name="rating" value={{mango.rating}}>
                             <button class=" btn btn-secondary mt-1 view-button" type="submit">View Details</button>
                     </form>
-                    <!-- <a href="../../Fruits/mango">
-                    <button class=" btn btn-secondary mt-1 view-button">View Details</button>
-                    </a> -->
                 </div>
             </div>
         </div>
         {% endfor %}
     </div>
-    <!-- Your existing HTML code -->
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var addToCartButtons = document.querySelectorAll('.btn-primary');
-
-        addToCartButtons.forEach(function (button) {
-            button.addEventListener('click', function () {
-                // Get the relevant item details
-                var mangoId = button.closest('.mango-fruit-container').dataset.mangoId; // You should add data-mango-id attribute to your HTML
-                var quantity = button.previousElementSibling.value;
-
-                // Check if the user is logged in
-                // Simulating the check; replace this with your actual authentication logic
-                var isLoggedIn = true; // Replace with your actual authentication check
-
-                if (isLoggedIn) {
-                    // If logged in, send the item details to the server
-                    addToCart(mangoId, quantity);
-                } else {
-                    // If not logged in, you might want to redirect to the login page
-                    alert('Please log in to add items to the cart.');
-                }
-            });
-        });
-
-        function addToCart(mangoId, quantity) {
-            // Send an AJAX request to the server
-            var csrftoken = getCookie('csrftoken'); // Function to get the CSRF token from cookies
-
-            var data = {
-        mango_id: mangoId,
-        quantity: quantity,
-        csrfmiddlewaretoken: csrftoken  // Include the CSRF token in your data
-    };
-
-            var xhr = new XMLHttpRequest();
-            console.log(xhr);
-            xhr.open('POST', '/add_to_cart/');
-            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            xhr.setRequestHeader("X-CSRFToken", csrftoken);  // Set the CSRF token in the header
-
-            xhr.onload = function () {
-                if (xhr.status === 200) {
-                    var response = JSON.parse(xhr.responseText);
-                    alert(response.message);
-                } else {
-                    console.error('Error adding item to cart. Status: ' + xhr.status);
-                    console.error('Response: ' + xhr.responseText);
-                    alert('Error adding item to cart');
-                }
-            };
-
-            var data = 'product_id=' + encodeURIComponent(mangoId) + '&quantity=' + encodeURIComponent(quantity);
-            xhr.send(data);
-        }
-        function getCookie(name) {
-    var cookieValue = null;
-    if (document.cookie && document.cookie !== '') {
-        var cookies = document.cookie.split(';');
-        for (var i = 0; i < cookies.length; i++) {
-            var cookie = cookies[i].trim();
-            // Check if the cookie name matches the expected format
-            if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                break;
-            }
-        }
-    }
-    return cookieValue;
-}
-    });
-</script>
-
 </body>
 </html>

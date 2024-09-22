@@ -25,46 +25,11 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
-    # path('home3/',views.home),
-    # path('test2/<str:fruitName>/',views.test2,name='test2'),
-
     path('FruitsTableData/mango2/', views.mango2),
-
-    #path('login/', views.login, name='user_login'),
-    path('FruitsTableData/mango/', views.mango),
-    
-    # path('fruitsdata/mango/<str:fruitName>/', views.fruitWiseList,name='fruitWiseList'),
+    # path('login/',views.login),
     path('login/',views.login),
-    path('about/', views.about),
     path('register/',views.register),
-    path('mango/',views.mango),
-    path('Fruits/mango/',views.mangodet),
-
     path('FruitsTableData/productDetails/', views.productdetails),
-
-
-    path('cart/', views.add_to_cart, name='add_to_cart'),
     path('login/userDashbord/', views.dashboard),
-    path('apple/',views.apple),
-    path('banannas/',views.banannas),
-    path('ber/',views.ber),
-    path('cashew/',views.cashew),
-    path('coconut/',views.coconut),
-    path('custardapple/',views.custardapple),
-    path('dragen/',views.dragen),
-    path('fig/',views.fig),
-    path('grapes/',views.grapes),
-    path('guavas/',views.guavas),
-    path('jackfruit/',views.jackfruit),
-    path('kiwi/',views.kiwi),
-    path('orange/',views.orange),
-    path('papayas/',views.papayas),
-    path('peach/',views.peach),
-    path('pears/', views.pears),
-    path('pineapple/',views.pineapple),
-    path('plum/',views.plum),
-    path('pomegranate/',views.pomegranate),
-    path('sapota/',views.sapota),
-    path('sweetLime/',views.sweetLime),
     path('logout/',views.logout),
 ]
