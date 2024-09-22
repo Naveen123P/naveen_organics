@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+*{
+    box-sizing: border-box;
+
+}
+body{
+    margin: 0px;
+}
+.marquee-styles{
+    background-color: greenyellow;
+    margin-bottom: 0%;
+    display: flex;
+    height: 25px;
+}
+.marqee-span{
+    color: #4432cd;
+    font-family: "Bree Srief";
+    font-weight: bolder;
+    font-size: larger;
+    
+}
+.marqee-container{
+    display: flex;
+
+}
+.slogan{
+    font-family: "Roboto";
+    color: rgb(249, 4, 184);
+    font-weight: bold;
+    justify-self: center;
+    
+}
+.fixed-bar{
+    height: 65px;
+    width: 100%;
+    background-color: rgb(249, 5, 74);
+    display: flex;
+    align-items: center;
+}
+.nav-logo{
+    height: 60px;
+    width: 80px;
+    border-radius: 5px;
+    margin-top: 2.5px;
+    margin-left: 2.5px;
+}
+
+.search-div{
+    height: 45px;
+    width: 35%;
+    border-radius: 45px;
+    margin: 10px;
+    border: none;
+    display: flex;
+    background-color: #ffffff;
+    outline: none;
+}
+.search-bar{
+    height: 45px;
+    width: 90%;
+    border: none;
+    border-radius: 45px;
+    background-color: #ffffff;
+    outline: none;
+}
+.sigin-button{
+    height: 45px;
+    width: 85px;
+    border-radius: 45px;
+    margin-left: 0px;
+    margin: 10px;
+    margin-right: 5px;
+    margin-left: 0px;
+    border: none;
+}
+.fav-style{
+    color: rgb(249, 143, 5);
+    height: 50px;
+    width: 50px;
+}
+
+.fav-style1{
+    color: rgb(249, 143, 5);
+    height: 100px;
+    width: 100px;
+}
+#fav-icon{
+    margin: 10px;
+    font-size: xx-large;
+    color: seashell;
+    align-self: center;
+}
+.fruits-container{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    margin: 2px;
+
+}
+.fruit-container{
+    width: 75px;
+    height: 75px;
+
+}
+.fruit-img{
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    padding: 3px;
+}
+.live-video:hover{
+    height: 250px;
+    width: 250px;
+}
+.fruit-name{
+    font-family: "Roboto";
+    font-weight: bold;
+    text-align: center;
+}
+.sapota-margin{
+    margin-right: 2px;
+}
+#c-image{
+    width: 100%;
+    height: 20%;
+    border-radius: 10px;
+    padding: 3px;
+}
+.all-fruits-container{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(169, 217, 208);
+    border-radius: 30px;
+    padding: 5px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.one-fruits{
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 190px;
+    width: 165px;
+}
+.container-fruit-img{
+    height: 160px;
+    width: 150px;
+    border-radius: 5px;
+}
+.fruit-name{
+    text-align: center;
+}
+.all-mango-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.mango-fruit-container {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 5px;
+    height: 200px;
+    width:  375px;
+
+}
+.mango-fruit {
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.mango-fruit button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+.bg-mango-img {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.favorite-icon {
+    font-size: 20px;
+    color: #d01717;
+    cursor: pointer;
+    align-self: flex-end;
+}
+.mango-img {
+    width: 100%;
+    height: 180px;
+    border-radius: 5px;
+}
+.cart-button{margin-top: 10px;}
+.mango-fruit-name{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Roboto";
+    
+}
+.price-text{
+    font-size: medium;
+}
+.all-mango-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}

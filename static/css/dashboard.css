@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: right;
+}
+
+.dashboard-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.widget {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin: 1rem;
+    flex: 1;
+}
+
+button {
+    background-color: #ff3333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff6666;
+}

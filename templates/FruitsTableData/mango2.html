@@ -1,0 +1,383 @@
+<!-- product_page.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    {% load static %}
+    <link rel="stylesheet" href = "{% static 'css/home2.css' %}">
+    <style>
+    #leftPositionVideo:hover{
+            transform: translate(-75%,-75%);
+        }
+        #rightPositionVideo:hover{
+            transform: translate(-75%,-55%);
+        }
+        #specialPositionVideo:hover{
+            transform: translate(0%,-55%);
+        }
+        #products{
+            width: 100%;
+        }
+    .all-mango-container{
+    display: flex !important;
+    justify-content: space-around !important;
+    flex-wrap: wrap !important;
+}
+        @media (max-width:400px){
+            #banannaVideo{
+                display: none;
+            }
+            #sapotaVideo{
+                display: none;
+            }
+        }
+        @media (min-width: 576px){
+        .search-div{
+            width: 75%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .all-mango-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    }   
+    .mango-fruit-container {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 5px;
+    height: 230px;
+    width:  390px;
+
+}
+.bg-mango-img {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.favorite-icon {
+    font-size: 20px;
+    color: #d01717;
+    cursor: pointer;
+    align-self: flex-end;
+}
+.mango-img {
+    width: 100%;
+    height: 180px;
+    border-radius: 5px;
+}
+.cart-button{
+    margin-top: 10px;
+    background-color: rgb(66, 126, 246) !important;
+}
+.view-button{
+    background-color: rgb(21, 180, 174) !important;
+}
+.mango-fruit-name{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Roboto";
+    
+}
+.price-text{
+    font-size: medium;
+} 
+
+.all-fruits-products{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            border-radius: 5px;
+        }
+        .profile-img{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+        .profile-details{
+            display: flex;
+            align-items: center;
+            margin-right: 1rem;
+            border: none;
+            background-color: transparent;
+        }
+        /* Add this CSS to your existing styles */
+#logout {
+    display: none; /* Hide the element by default */
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff; /* Adjust the background color as needed */
+    padding: 10px;
+}
+
+#logout a {
+    text-decoration: none;
+    background-color: blue;
+    color: #12d754; /* Adjust the text color as needed */
+}
+
+#logout:hover {
+    display: flex; /* Show the element on hover */
+    text-decoration: none;
+}
+.user-name{
+    font-size: large;
+    font-weight: 700;
+    font-family: "Roboto";
+    color: cyan;
+    margin-left: 3px;
+}
+
+.logout-button{
+    background-color: rgb(50, 94, 253);
+    border: none;
+    border-radius: 5px;
+    padding: 0.3rem 1rem;
+}
+.logout-anchor{
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.logout-anchor:hover{
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #12fcdd;
+}
+</style>
+</head>
+<body>
+    <marquee class="marquee-styles">
+        
+        <p class="slogan"><span class="marqee-span">Welcome to Naveen Organics  </span>Yours Health is Our Nation's Wealth</p>
+       
+        
+    </marquee>
+    
+    <div class="fixed-bar">
+        <div class="nav-container">
+            <img src="https://res.cloudinary.com/dywnwbcln/image/upload/v1699592066/jmd1qvayjhrgxbzu6os5.png" class = "nav-logo"/>
+        </div>
+        <div class="search-div">
+            <input type="search" placeholder="Search" class="search-bar">
+            <img src="https://assets.ccbp.in/frontend/react-js/google-search-icon.png" alt="..." class="search-img"/>
+        </div>
+        <form action="../../login/userDashbord/" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="username" value={{username}}>
+            <button type="submit" class="profile-details">
+                <img src="https://res.cloudinary.com/dywnwbcln/image/upload/v1704197105/adbjcfu245grzedn4oz4.png" class="profile-img">
+                <p class="user-name">{{username|title}}</p>
+            </button>
+        </form>      
+        <!-- <i class="fas fa-heart " id="fav-icon"></i> -->
+         <div class="logout-button">
+            <a href="../../logout" class="logout-anchor">Logout</a>
+         </div>
+        
+    </div>
+    
+
+
+    <div class="fruits-container mb-4">
+        <div class="fruit-container">
+            <iframe width="70" height="60" src="https://www.youtube-nocookie.com/embed/tG_qJN6DElo?mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; muted; web-share" allowfullscreen class="live-video" id="specialPositionVideo"></iframe>           
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/K-VT9zRSC-0?mute=1&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+            <p class="fruit-name">Mango</p>
+        </div>
+        <div class="fruit-container">
+            <iframe width="70" height="60" src="https://www.youtube-nocookie.com/embed/VecJwMLX3y4?mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="live-video" id="rightPositionVideo"></iframe>            <p class="fruit-name">Orange</p>
+        </div>
+        <div class="fruit-container">
+            <iframe width="70" height="60" src="https://www.youtube-nocookie.com/embed/dQlY4FRHhT4?mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="live-video" id="rightPositionVideo"></iframe>            <p class="fruit-name">Apple</p>
+        </div>
+        
+        <div class="fruit-container">
+            <iframe width="70" height="60" src="https://www.youtube-nocookie.com/embed/MhDRrJ1gkzg?mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="live-video" id="rightPositionVideo"></iframe>            <p class="fruit-name">Graps</p>
+        </div>
+        <div class="fruit-container">
+            <iframe width="70" height="60" src="https://www.youtube-nocookie.com/embed/crLu4TIhZEg?mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="live-video" id="rightPositionVideo"></iframe>            <p class="fruit-name">Dragen</p>
+        </div>
+        <div class="fruit-container" id="banannaVideo">
+            <iframe width="70" height="60" src="https://www.youtube-nocookie.com/embed/HnqpOcghnmI?mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="live-video" id="rightPositionVideo"></iframe>            <p class="fruit-name">Bananna</p>
+        </div>
+        <div class="fruit-container" id="sapotaVideo">
+            <iframe width="70" height="60" src="https://www.youtube-nocookie.com/embed/EJHLiu7k2pA?mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="live-video" id="leftPositionVideo"></iframe>            <p class="fruit-name sapota-margin">Sapota</p>
+        </div>
+
+    </div>
+
+    <!-- <div class="all-mango-container" id="sectionMangoFruitsContainer">
+        {% for mango in mangoes %}
+        <div>
+          <form action="../../cart" method="POST" class="mango-form">
+            <input type="hidden" name="id" value="{{ mango.id }}">
+            <div class="mango-fruit-container" data-mango-id="{{ mango.id }}">
+                <div class="bg-mango-img">
+                    <i class="far fa-heart favorite-icon"></i>
+                    <img src="{{ mango.imgUrl }}" alt="mango fruit" class="mango-img">
+                </div>
+                <div class="mango-fruit">
+                    <h3 class="mango-fruit-name">{{ mango.categoryName }}</h3>
+                    <p class="price-text">Price: Rs. {{ mango.price }}/kg</p>
+                    <div>
+                        <label for="quantity">Quantity:</label>
+                        <select name="quantity" id="quantity_{{ mango.id }}">
+                            <option value="1">1 kg</option>
+                            <option value="2">2 kg</option>
+                            <option value="3">3 kg</option>
+                            <option value="4">4 kg</option>
+                            <option value="5">5 kg</option>
+                        </select>
+                        <button type="submit" class="cart-button btn btn-primary mr-1">Add to Cart</button>
+                        <a href="../../Fruits/mango">
+                            <button type="button" class="cart-button btn btn-secondary">View Details</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+        {% endfor %}
+    </div> -->
+    
+
+    <div class="all-fruits-products" >
+        {% for mango in mangoes %}
+        <div class="mango-fruit-container">
+            <div class="bg-mango-img">
+                <!-- <i onclick="addorremovecolor()" id="favouriteIcon" class="far fa-heart favorite-icon"></i> -->
+                <img src={{mango.imgUrl}} alt="mango fruit" class="mango-img" >
+                
+            </div>
+            <div class="mango-fruit">
+                <h3 class="mango-fruit-name">{{mango.categoryName}}</h3>
+                <p class="price-text">Price: Rs: {{mango.price}} /-kg</p>
+                <div>
+                    <div>
+                    <!-- <form action="../cart" method="POST"> -->
+                        <!-- {% csrf_token %} -->
+                        <input type="hidden" name="username" value={{user}}>
+                        <input type="hidden" name="productId" value={{mango.price}}>
+                        <input type="hidden" name="fruitname" value={{mango.categoryName}}>
+                        <input type="hidden" name="price" value={{mango.price}}>
+                        <label for="quantity">Quantity:</label>
+                        <select name="quantity" id="quantity">
+                            <option value="1">1 kg</option>
+                            <option value="2">2 kg</option>
+                            <option value="3">3 kg</option>
+                            <option value="4">4 kg</option>
+                            <option value="5">5 kg</option>
+                        </select>
+                        <!-- <div class="mr-1 cart-button">Add to Cart</div> -->
+                    <!-- </form> -->.
+                    </div>
+                    <form action="../productDetails/" method="POST">
+                        {% csrf_token %}
+                        <!-- <input type="hidden" name="username" value={{user}}> -->
+                        <input type="hidden" name="imgUrl" value={{mango.imgUrl}}>
+                        <input type="hidden" name="fruitname" value={{mango.categoryName}}>
+                        <input type="hidden" name="price" value={{mango.price}}>
+                        <input type="hidden" name="rating" value={{mango.rating}}>
+                            <button class=" btn btn-secondary mt-1 view-button" type="submit">View Details</button>
+                    </form>
+                    <!-- <a href="../../Fruits/mango">
+                    <button class=" btn btn-secondary mt-1 view-button">View Details</button>
+                    </a> -->
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <!-- Your existing HTML code -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var addToCartButtons = document.querySelectorAll('.btn-primary');
+
+        addToCartButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                // Get the relevant item details
+                var mangoId = button.closest('.mango-fruit-container').dataset.mangoId; // You should add data-mango-id attribute to your HTML
+                var quantity = button.previousElementSibling.value;
+
+                // Check if the user is logged in
+                // Simulating the check; replace this with your actual authentication logic
+                var isLoggedIn = true; // Replace with your actual authentication check
+
+                if (isLoggedIn) {
+                    // If logged in, send the item details to the server
+                    addToCart(mangoId, quantity);
+                } else {
+                    // If not logged in, you might want to redirect to the login page
+                    alert('Please log in to add items to the cart.');
+                }
+            });
+        });
+
+        function addToCart(mangoId, quantity) {
+            // Send an AJAX request to the server
+            var csrftoken = getCookie('csrftoken'); // Function to get the CSRF token from cookies
+
+            var data = {
+        mango_id: mangoId,
+        quantity: quantity,
+        csrfmiddlewaretoken: csrftoken  // Include the CSRF token in your data
+    };
+
+            var xhr = new XMLHttpRequest();
+            console.log(xhr);
+            xhr.open('POST', '/add_to_cart/');
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);  // Set the CSRF token in the header
+
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    alert(response.message);
+                } else {
+                    console.error('Error adding item to cart. Status: ' + xhr.status);
+                    console.error('Response: ' + xhr.responseText);
+                    alert('Error adding item to cart');
+                }
+            };
+
+            var data = 'product_id=' + encodeURIComponent(mangoId) + '&quantity=' + encodeURIComponent(quantity);
+            xhr.send(data);
+        }
+        function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].trim();
+            // Check if the cookie name matches the expected format
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+    });
+</script>
+
+</body>
+</html>

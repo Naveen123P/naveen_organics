@@ -1,0 +1,31 @@
+body{
+    background-image:url("https://cdn.wallpapersafari.com/86/88/GT0CR1.jpg");
+}
+    .main{
+        height: 850px;
+        width: 800px;
+        border: 2px salmon;
+        /*background-color: chocolate;*/
+        margin-left: 20%;
+        padding: 10px;
+        margin-top: 10%;
+       /* background-image: url("https://th.bing.com/th/id/OIP.BXZ9IND1109GxqG05AwaVAHaFj?w=260&h=194&c=7&r=0&o=5&pid=1.7.jpg");*/
+       /* background-image:url("https://cdn.wallpapersafari.com/86/88/GT0CR1.jpg");*/
+    color: ghostwhite;
+
+    }
+    .box{
+        height: auto;
+        width: 300px;
+        /*border: 2px solid red;*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        margin-left: 25%;
+        background-image:url("https://cdn.wallpapersafari.com/86/88/GT0CR1.jpg");
+    }
+    input{
+
+    }
